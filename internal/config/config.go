@@ -18,8 +18,9 @@ func GetViper() *viper.Viper {
 }
 
 func setupDefaults() {
-	v.SetDefault("spec_file", "/src/tool.yml")
-	v.SetDefault("input_file", "/in/inputs.json")
-	v.SetDefault("citation_file", "/src/CITATION.cff")
-	v.SetDefault("license_file", "/src/LICENSE")
+	v.SetDefault("spec_file", "tool.yml")
+	v.SetDefault("input_file", "../in/inputs.json")
+	v.SetDefault("citation_file", "CITATION.cff")
+	v.SetDefault("license_file", "LICENSE")
+	v.SetDefault("output_folder", "../out")
 }

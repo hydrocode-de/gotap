@@ -59,6 +59,7 @@ func init() {
 	rootCmd.PersistentFlags().String("input-file", "", "Path to the inputs.json file")
 	rootCmd.PersistentFlags().String("citation-file", "", "Path to the CITATION.cff file")
 	rootCmd.PersistentFlags().String("license-file", "", "Path to the LICENSE file")
+	rootCmd.PersistentFlags().String("output-folder", "", "Output folder for the tool execution metadata")
 }
 
 func bindFlags() {
@@ -68,4 +69,5 @@ func bindFlags() {
 	v.BindPFlag("input_file", rootCmd.PersistentFlags().Lookup("input-file"))
 	v.BindPFlag("citation_file", rootCmd.PersistentFlags().Lookup("citation-file"))
 	v.BindPFlag("license_file", rootCmd.PersistentFlags().Lookup("license-file"))
+	v.BindPFlag("output_folder", rootCmd.PersistentFlags().Lookup("output-folder"))
 }
