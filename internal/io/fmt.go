@@ -6,7 +6,7 @@ import (
 	"github.com/hydrocode-de/tool-spec-go/validate"
 )
 
-func WriteValidationError(validationError validate.ValidationError, verbose bool) string {
+func WriteValidationError(validationError *validate.ValidationError, verbose bool) string {
 	if verbose {
 		return fmt.Sprintf("%s: %s\n  Field: %s\n  Expected: %s\n  Actual: %s",
 			validationError.Type,
