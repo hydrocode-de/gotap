@@ -4,7 +4,7 @@ go 1.25.4
 
 require (
 	github.com/alexander-lindner/go-cff v0.5.1
-	github.com/hydrocode-de/tool-spec-go v0.1.0
+	github.com/hydrocode-de/tool-spec-go v0.2.0
 	github.com/shirou/gopsutil/v3 v3.24.5
 	github.com/spf13/cobra v1.10.1
 	github.com/spf13/pflag v1.0.10
