@@ -261,10 +261,16 @@ func calcualteSum(samples []uint64) uint64 {
 	for _, sample := range samples {
 		sum += sample
 	}
-	return sum
+	return sum // Sum is safe even with empty array (returns 0)
 }
 
 func calcualteAverage(samples []uint64) uint64 {
-	sum := calcualteSum(samples)
+	if len(samples) == 0 {
+		return 0 // Return 0 for missing CPU data
+	}
+	sum := uint64(0)
+	for _, sample := range samples {
+		sum += sample
+	}
 	return sum / uint64(len(samples))
 }
