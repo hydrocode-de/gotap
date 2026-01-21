@@ -244,6 +244,9 @@ func ExecuteCommand(command ResolvedCommand) (ExecutionResult, error) {
 }
 
 func calcualateMax(samples []uint64) uint64 {
+	if len(samples) == 0 {
+		return 0 // Return 0 for missing CPU data
+	}
 	max := samples[0]
 	for _, sample := range samples {
 		if sample > max {
